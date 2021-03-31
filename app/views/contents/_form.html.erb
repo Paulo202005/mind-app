@@ -1,3 +1,5 @@
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 <%  if content.errors.any? %>
   Errors: <%= content.errors.full_messages.join(', ') %>
   <BR><BR>
@@ -14,6 +16,12 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class'field'>
+    <%= form.label :tags %>
+    <%= form.select :tags, options_for_select(current_user.tags.pluck(:name), content.tags.pluck(:name)), 
+      {}, { class: 'select2', multiple: 'multiple', style: 'width: 50%' } %>
+  </div>
+  
   <div class'actions'>
     <%= form.submit %>    
   </div>
