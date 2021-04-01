@@ -213,7 +213,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
-  bootstrap
+  bootstrap (~> 4.6.0)
   byebug
   devise
   jbuilder (~> 2.7)
